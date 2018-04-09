@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "lib": [
+      "es2015"
+    ],
+    "types": [
+      "jest"
+    ]
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/*.ts"
+  ]
+}

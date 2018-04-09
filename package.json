@@ -1,0 +1,63 @@
+{
+  "name": "nodejs-ex-typescript",
+  "version": "0.0.1",
+  "description": "Node.js sample app written in TypeScript for OpenShift 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "MORGAN_ENABLED=false jest",
+    "nodeshift": "nodeshift",
+    "install": "tsc",
+    "compile": "tsc",
+    "start": "node src/index.js"
+  },
+  "author": "Evan Shortiss <evanshortiss@gmail.com>",
+  "license": "CC-BY-1.0",
+  "jest": {
+    "testEnvironment": "node",
+    "cache": false,
+    "collectCoverage": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 92,
+        "functions": 98,
+        "lines": 98,
+        "statements": 98
+      }
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "dependencies": {
+    "@types/express": "~4.11.1",
+    "@types/jest": "~21.1.10",
+    "@types/mongodb": "~2.2.20",
+    "@types/morgan": "~1.7.35",
+    "@types/node": "~9.6.2",
+    "@types/supertest": "~2.0.4",
+    "ejs": "~2.5.8",
+    "env-var": "~3.2.0",
+    "express": "~4.16.3",
+    "mongodb": "~2.2.35",
+    "morgan": "~1.9.0",
+    "typescript": "~2.6.2"
+  },
+  "devDependencies": {
+    "jest": "~22.4.3",
+    "nodeshift": "~1.6.0",
+    "supertest": "~3.0.0",
+    "ts-jest": "~21.2.4"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
